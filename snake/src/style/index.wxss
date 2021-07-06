@@ -1,3 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: red;
+  font: bold 20px "Courier";
+}
+#container {
+  width: 500px;
+  height: 500px;
+  border: 10px solid #000000;
+  margin: 50px auto;
+  background-color: #b7d4a8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#container .stage {
+  width: 450px;
+  height: 350px;
+  border: 2px solid #000;
+  position: relative;
+}
+#container .stage .snake {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border: 1px solid #b7d4a8;
+  position: absolute;
+}
+#container .stage #food {
+  width: 10px;
+  height: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: space-between;
+  justify-content: space-between;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+}
+#container .stage #food .f {
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+}
+#container .message {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
 }
