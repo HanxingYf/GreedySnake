@@ -19,14 +19,14 @@ module.exports = {
         test: /\.ts$/,
         use: [
           // 配置babel
-         {
-           loader: "babel-loader",
-           options:{
-             presets:[
-               "@babel/preset-env"
-             ]
-           }
-         },
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env"
+              ]
+            }
+          },
           "ts-loader"
         ],
         exclude: /node-modules/
@@ -35,7 +35,7 @@ module.exports = {
       // less
       {
         test: /\.less$/,
-        use:[
+        use: [
           "style-loader",
           "css-loader",
           // 引入 postcss
@@ -57,11 +57,14 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.wasm'],
+  },
 
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      template:'./src/index.html'
+      template: './src/index.html'
     })
   ]
 }
